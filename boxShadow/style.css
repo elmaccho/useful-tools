@@ -10,14 +10,24 @@ body{
     align-items: center;
     flex-direction: column;
     margin: 0;
+    gap: 35px;
+}
+nav{
+    display: flex;
+    width: 1000px;
+    height: 100px;
+    border-radius: 23px;
+    background-color: rgb(235, 235, 235);
 }
 main{
-    width: 70%;
+    width: 100%;
     min-height: 100vh;
-
 
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
 }
 .tool__wrapper{
     display: flex;
