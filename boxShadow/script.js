@@ -19,8 +19,11 @@ const targetBox = document.querySelector('.target')
 
 const settings = document.querySelector('.settings')
 
-
 const lineValues = document.querySelectorAll('.line-values')
+
+const copyBtn = document.querySelector('.copyBtn')
+const checkIcon = document.querySelector('.checkIcon')
+const innerText = document.querySelector('.innerText')
 
     inputHorNumber.value = '0'
     inputVerNumber.value = '0'
@@ -31,28 +34,40 @@ const lineValues = document.querySelectorAll('.line-values')
         lineValue.textContent =  ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
     }
 
-const HorizontalValue = () => {
-    inputHorNumber.value = inputHorRange.value
-
-    setValues()
+const HorizontalRange = () => {
+    inputHorRange.value = inputHorNumber.value;
+    setValues();
+}
+const HorizontalNumber = () => {
+    inputHorNumber.value = inputHorRange.value;
+    setValues();
 }
 
-const VerticalValue = () => {
-    inputVerNumber.value = inputVerRange.value
-
-    setValues()
+const VerticalRange = () => {
+    inputVerRange.value = inputVerNumber.value;
+    setValues();
+}
+const VerticalNumber = () => {
+    inputVerNumber.value = inputVerRange.value;
+    setValues();
 }
 
-const BlurValue = () => {
-    inputBlurNumber.value = inputBlurRange.value
-
-    setValues()
+const BlurRange = () => {
+    inputBlurRange.value = inputBlurNumber.value;
+    setValues();
+}
+const BlurNumber = () => {
+    inputBlurNumber.value = inputBlurRange.value;
+    setValues();
 }
 
-const SpreadValue = () => {
-    inputSpreadNumber.value = inputSpreadRange.value
-
-    setValues()
+const SpreadRange = () => {
+    inputSpreadRange.value = inputSpreadNumber.value;
+    setValues();
+}
+const SpreadNumber = () => {
+    inputSpreadNumber.value = inputSpreadRange.value;
+    setValues();
 }
 
 const ColorValue = () => {
@@ -86,21 +101,41 @@ const setValues = () => {
     }
 }
 
-console.log(inputColor.value);
+const CopyAnimation = () => {
+    checkIcon.style.display = 'block'
+    innerText.style.display = 'none'
+    copyBtn.style.transform = "translateY(10px)"
+    
+    setTimeout(() => {
+        copyBtn.style.transform = "translateY(0px)"
+    }, 100);
+    
+    setTimeout(() => {
+        copyBtn.style.transform = "translateY(-10px)"
+        checkIcon.style.display = 'none'
+        innerText.style.display = 'block'
 
-inputHorNumber.addEventListener('input', HorizontalValue)
-inputHorRange.addEventListener('input', HorizontalValue)
+        setTimeout(() => {
+            copyBtn.style.transform = "translateY(0px)"
+        }, 100);
+    }, 2000);
+}
 
-inputVerNumber.addEventListener('input', VerticalValue)
-inputVerRange.addEventListener('input', VerticalValue)
+inputHorNumber.addEventListener('input', HorizontalRange)
+inputHorRange.addEventListener('input', HorizontalNumber)
 
-inputBlurNumber.addEventListener('input', BlurValue)
-inputBlurRange.addEventListener('input', BlurValue)
+inputVerNumber.addEventListener('input', VerticalRange)
+inputVerRange.addEventListener('input', VerticalNumber)
 
-inputSpreadNumber.addEventListener('input', SpreadValue)
-inputSpreadRange.addEventListener('input', SpreadValue)
+inputBlurNumber.addEventListener('input', BlurRange)
+inputBlurRange.addEventListener('input', BlurNumber)
+
+inputSpreadNumber.addEventListener('input', SpreadRange)
+inputSpreadRange.addEventListener('input', SpreadNumber)
 
 inputColor.addEventListener('input', ColorValue)
 
 inputRadioInset.addEventListener('input', ShadowType)
 inputRadioOutset.addEventListener('input', ShadowType)
+
+copyBtn.addEventListener('click', CopyAnimation)
