@@ -86,17 +86,23 @@ const ShadowType = () => {
 
 const setValues = () => {
     if(inputRadioInset.checked == true){
-        targetBox.style.boxShadow = `inset ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+
+        let insetChecked = 'inset'
+
+        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
 
         for(const lineValue of lineValues){
-            lineValue.textContent =  `inset ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
         }
 
     } else {
-        targetBox.style.boxShadow = ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+
+        let insetChecked = ''
+
+        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
  
         for(const lineValue of lineValues){
-            lineValue.textContent =  ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
         }
     }
 }
@@ -121,6 +127,29 @@ const CopyAnimation = () => {
     }, 2000);
 }
 
+const copyClipboard = () => {
+    if(inputRadioInset.checked == true){
+        let insetChecked = 'inset'
+
+            let toClipBoard = `
+            -webkit-box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
+            -moz-box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
+            box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
+            `
+
+            navigator.clipboard.writeText(toClipBoard)
+    } else {
+        let insetChecked = ''
+
+           let toClipBoard = `-webkit-box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
+            -moz-box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
+            box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
+            `
+
+            navigator.clipboard.writeText(toClipBoard)
+    }
+}
+
 inputHorNumber.addEventListener('input', HorizontalRange)
 inputHorRange.addEventListener('input', HorizontalNumber)
 
@@ -139,3 +168,4 @@ inputRadioInset.addEventListener('input', ShadowType)
 inputRadioOutset.addEventListener('input', ShadowType)
 
 copyBtn.addEventListener('click', CopyAnimation)
+copyBtn.addEventListener('click', copyClipboard)
