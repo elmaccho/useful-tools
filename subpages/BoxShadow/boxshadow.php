@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box-Shadow generator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/4798a03daf.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    <header>
-        <button type="button" class="openMenu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </header>
-
-    <main>
+<main>
         <nav>
             <div class="nav__wrapper">
                 <button type="button" class="closeMenu">
@@ -105,12 +88,4 @@
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <a href="https://elmaccho.github.io/react-portfolio-page/index.html" target="_blank">Check my portfolio!</a>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+</main>
