@@ -34,6 +34,11 @@ const innerText = document.querySelector('.innerText')
         lineValue.textContent =  ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
     }
 
+
+const openMenu = document.querySelector('.openMenu')
+const closeMenu = document.querySelector('.closeMenu')
+const nav = document.querySelector('nav')
+
 const HorizontalRange = () => {
     inputHorRange.value = inputHorNumber.value;
     setValues();
@@ -150,6 +155,26 @@ const copyClipboard = () => {
     }
 }
 
+const openMenuWrapper = () => {
+    nav.style.display = "flex"
+    openMenu.style.opacity = "0"
+    closeMenu.style.opacity = "1"
+    
+    setTimeout(() => {
+        nav.style.opacity = "1"
+    }, 10);
+}
+
+const closeMenuWrapper = () => {
+    nav.style.opacity = "0"
+    closeMenu.style.opacity = "0"
+    openMenu.style.opacity = "1"
+    
+    setTimeout(() => {
+        nav.style.display = "none"
+    }, 100);
+}
+
 inputHorNumber.addEventListener('input', HorizontalRange)
 inputHorRange.addEventListener('input', HorizontalNumber)
 
@@ -169,3 +194,6 @@ inputRadioOutset.addEventListener('input', ShadowType)
 
 copyBtn.addEventListener('click', CopyAnimation)
 copyBtn.addEventListener('click', copyClipboard)
+
+openMenu.addEventListener('click', openMenuWrapper)
+closeMenu.addEventListener('click', closeMenuWrapper)
