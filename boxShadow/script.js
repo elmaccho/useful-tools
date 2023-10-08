@@ -156,22 +156,18 @@ const copyClipboard = () => {
 }
 
 const openMenuWrapper = () => {
-    nav.style.display = "flex"
-    openMenu.style.opacity = "0"
-    closeMenu.style.opacity = "1"
-    
+    nav.classList.add('openTimeOut')
+    openMenu.style.opacity = '0'
     setTimeout(() => {
-        nav.style.opacity = "1"
-    }, 10);
+        nav.classList.add('open')
+    }, 100);
 }
 
 const closeMenuWrapper = () => {
-    nav.style.opacity = "0"
-    closeMenu.style.opacity = "0"
-    openMenu.style.opacity = "1"
-    
+    openMenu.style.opacity = '1'
+    nav.classList.remove('open')
     setTimeout(() => {
-        nav.style.display = "none"
+        nav.classList.remove('openTimeOut')
     }, 100);
 }
 
