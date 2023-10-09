@@ -1,21 +1,8 @@
-<main>
-        <nav>
-            <div class="nav__wrapper">
-                <button type="button" class="closeMenu">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <a href="?page=boxshadow" class="toolBtn">Box Shadow</a>
-                <a href="?page=textshadow" class="toolBtn">Text Shadow</a>
-                <a href="?page=borderradius" class="toolBtn">Border Radius</a>
-                <a href="?page=gradient" class="toolBtn">Gradient</a>
-                <a href="?page=flexbox" class="toolBtn">Flexbox</a>
-                <a href="?page=transition" class="toolBtn">Transition</a>
-                <a href="?page=transform" class="toolBtn">Transform</a>
-                <a href="?page=background" class="toolBtn">Background</a>
-            </div>
-        </nav>
+<?php
+    $GLOBALS['head_title'] = "Box Shadow";
+?>
 
-        <div class="tool__wrapper">
+<div class="tool__wrapper">
             <div class="output__wrapper">
                 <div class="output">
                     <div class="target"></div>
@@ -87,5 +74,4 @@
                         </button>
                 </div>
             </div>
-        </div>
-</main>
+</div>
