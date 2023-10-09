@@ -12,6 +12,8 @@
         </button>
 </header>
 
+
+
 <footer>
         <a href="https://elmaccho.github.io/react-portfolio-page/index.html" target="_blank">Check my portfolio!</a>
 </footer>
