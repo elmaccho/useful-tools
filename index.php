@@ -13,14 +13,14 @@
         </h1>
     
         <div class="tools__wrapper">
-            <a href="subpages/main.php" class="toolBtn">Box Shadow</a>
-            <a href="?page=textshadow" class="toolBtn">Text Shadow</a>
-            <a href="?page=borderradius" class="toolBtn">Border Radius</a>
-            <a href="?page=gradient" class="toolBtn">Gradient</a>
-            <a href="?page=flexbox" class="toolBtn">Flexbox</a>
-            <a href="?page=transition" class="toolBtn">Transition</a>
-            <a href="?page=transform" class="toolBtn">Transform</a>
-            <a href="?page=background" class="toolBtn">Background</a>
+            <a href="subpages/main.php?page=boxshadow" class="toolBtn">Box Shadow</a>
+            <a href="subpages/main.php?page=textshadow" class="toolBtn">Text Shadow</a>
+            <a href="subpages/main.php?page=borderradius" class="toolBtn">Border Radius</a>
+            <a href="subpages/main.php?page=gradient" class="toolBtn">Gradient</a>
+            <a href="subpages/main.php?page=flexbox" class="toolBtn">Flexbox</a>
+            <a href="subpages/main.php?page=transition" class="toolBtn">Transition</a>
+            <a href="subpages/main.php?page=transform" class="toolBtn">Transform</a>
+            <a href="subpages/main.php?page=background" class="toolBtn">Background</a>
         </div>
     </main>
 
