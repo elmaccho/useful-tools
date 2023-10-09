@@ -25,6 +25,8 @@ const copyBtn = document.querySelector('.copyBtn')
 const checkIcon = document.querySelector('.checkIcon')
 const innerText = document.querySelector('.innerText')
 
+
+
     inputHorNumber.value = '0'
     inputVerNumber.value = '0'
     inputSpreadNumber.value = '5'

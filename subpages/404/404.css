@@ -1,0 +1,10 @@
+.error__title{
+    font-size: 128px;
+}
+.error__text{
+    font-size: 64px;
+}
+
+main{
+    max-height: 50vh;
+}

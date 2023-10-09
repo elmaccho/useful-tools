@@ -50,6 +50,12 @@
                 if(!empty($page)){
                     if(!in_array($page, $allowed_pages)){
                         include("404/404.php");
+
+                        echo "<style>";
+                        include("404/404.css");
+                        echo "</style>";
+
+                        echo "<script>document.querySelector('nav').remove()</script>";
                     } else {
                         if(is_file("$page/".$page.".php")){
                             include("$page/".$page.".php");
@@ -71,7 +77,7 @@
                     }
                 }
             } else {
-                include("mainStart.php");
+                header("Location: ../index.php");
             }
         ?>
     </main>
