@@ -127,7 +127,7 @@ const CopyAnimation = () => {
     }, 2000);
 }
 
-const copyClipboard = () => {
+const copyClipboard = async () => {
     if(inputRadioInset.checked == true){
         let insetChecked = 'inset'
 
@@ -137,7 +137,11 @@ const copyClipboard = () => {
             box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
             `
 
-            navigator.clipboard.writeText(toClipBoard)
+            try{
+                await navigator.clipboard.writeText(toClipBoard)
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
     } else {
         let insetChecked = ''
 
@@ -146,7 +150,11 @@ const copyClipboard = () => {
             box-shadow:${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};
             `
 
-            navigator.clipboard.writeText(toClipBoard)
+            try{
+                await navigator.clipboard.writeText(toClipBoard)
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
     }
 }
 

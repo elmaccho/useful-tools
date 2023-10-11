@@ -92,7 +92,6 @@ const copyClipboard = async () => {
 
     try{
         await navigator.clipboard.writeText(toClipBoard)
-        console.log('Copied!');
     } catch (err) {
         console.error('Failed to copy: ', err);
     }
