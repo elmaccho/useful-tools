@@ -89,20 +89,20 @@ const setValues = () => {
 
         let insetChecked = 'inset'
 
-        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
+        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
 
         for(const lineValue of lineValues){
-            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
+            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
         }
 
     } else {
 
         let insetChecked = ''
 
-        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
+        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
  
         for(const lineValue of lineValues){
-            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
+            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
         }
     }
 }
