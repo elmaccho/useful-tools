@@ -64,7 +64,7 @@ const ColorValue = () => {
 
 const setValues = () => {
     target.style.textShadow = `${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputColor.value}`
-    lineValue.textContent = ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputColor.value}`
+    lineValue.textContent = ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputColor.value};`
 }
 
 const CopyAnimation = () => {
