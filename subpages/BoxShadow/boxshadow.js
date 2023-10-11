@@ -25,19 +25,14 @@ const copyBtn = document.querySelector('.copyBtn')
 const checkIcon = document.querySelector('.checkIcon')
 const innerText = document.querySelector('.innerText')
 
-
-
     inputHorNumber.value = '0'
     inputVerNumber.value = '0'
     inputSpreadNumber.value = '5'
     inputBlurNumber.value = '20'
     inputColor.value = '#232323'
     for(const lineValue of lineValues){
-        lineValue.textContent =  ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+        lineValue.textContent =  ` ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
     }
-
-
-
 
 const HorizontalRange = () => {
     inputHorRange.value = inputHorNumber.value;
@@ -94,20 +89,20 @@ const setValues = () => {
 
         let insetChecked = 'inset'
 
-        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
 
         for(const lineValue of lineValues){
-            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
         }
 
     } else {
 
         let insetChecked = ''
 
-        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+        targetBox.style.boxShadow = `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
  
         for(const lineValue of lineValues){
-            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value}`
+            lineValue.textContent =  `${insetChecked} ${inputHorNumber.value}px ${inputVerNumber.value}px ${inputBlurNumber.value}px ${inputSpreadNumber.value}px ${inputColor.value};`
         }
     }
 }
@@ -176,4 +171,3 @@ inputRadioOutset.addEventListener('input', ShadowType)
 
 copyBtn.addEventListener('click', CopyAnimation)
 copyBtn.addEventListener('click', copyClipboard)
-
