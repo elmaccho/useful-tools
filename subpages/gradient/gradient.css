@@ -16,7 +16,6 @@
 .output{
     background-color: rgb(235, 235, 235);
     border-radius: 23px;
-    padding: 5px 15px;
     width: 980px;
     height: 650px;
 
@@ -27,12 +26,10 @@
     overflow: hidden;
 }    
 .target{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     background-color: white;
     border-radius: 23px;
-
-    box-shadow: 0px 0px 20px 5px #232323;
 }
 
 .settings{
@@ -44,6 +41,13 @@
 
     display: flex;
     flex-direction: column;
+}
+
+.input__color{
+    border: none;
+    padding: unset;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .tool__title{
@@ -70,6 +74,39 @@
     justify-content: left;
     align-items: center;
     gap: 10px;
+}
+
+.colors__sett{
+    background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 5px 0;
+    border-radius: 12px;
+
+    display: flex;
+}
+
+
+.gradientStyle__wrapper{
+    display: flex;
+}
+.linearBtn,.radiusBtn, .addBtn, .removeBtn{
+    width: 100%;
+    height: 30px;
+    border: 2px solid #e8783e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.linearBtn, .addBtn{
+    border-radius: 5px 0 0 5px;
+}
+.radiusBtn, .removeBtn{
+    border-radius: 0 5px 5px 0;
+}
+.styleActive{
+    background-color: #e8783e;
+    font-weight: 600;
+    color: white;
 }
 
 .input__number{
@@ -109,8 +146,10 @@
     padding: unset;
     background-color: transparent;
     cursor: pointer;
+    height: 32px;
+    width: 82px;
+    border-radius: 15px;
 }
-
 
 .code__wrapper{
     width: 100%;
