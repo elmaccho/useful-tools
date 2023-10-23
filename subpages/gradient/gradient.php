@@ -20,7 +20,7 @@
                     <div class="sett__row">
                         <p>Angle</p>
                         <div class="sett__position">
-                            <input class="input__number input__hor-number" type="number" name="" id="" value="0"><input class="input__range input__hor-range" type="range" name="" id="" min="-100" max="100" value="0">
+                            <input class="input__number input__angle-number" type="number" name="" id="" value="0" min="0" max="360"><input class="input__range input__angle-range" type="range" name="" id="" min="0" max="360" value="0">
                         </div>
                     </div>
 
@@ -28,16 +28,27 @@
                         <div class="sett__row">
                             <p>Color 1</p>
                             <div class="sett__position">
-                                <input class="input__number input__ver-number" type="number" name="" id="" value="0">
+                                <input class="input__number input__color-number" type="number" name="" id="" value="0">
                                 <input type="color" name="" id="" class="input__color">
-                                <input class="input__range input__ver-range" type="range" name="" id="" min="-100" max="100" value="0">
+                                <input class="input__range input__color-range" type="range" name="" id="" min="-100" max="100" value="0">
+                            </div>
+                        </div>
+                    </span>
+
+                    <span class="colors__wrapper">
+                        <div class="sett__row">
+                            <p>Color 2</p>
+                            <div class="sett__position">
+                                <input class="input__number input__color-number" type="number" name="" id="" value="0">
+                                <input type="color" name="" id="" class="input__color">
+                                <input class="input__range input__color-range" type="range" name="" id="" min="-100" max="100" value="0">
                             </div>
                         </div>
                     </span>
 
                     <span class="colors__sett">
-                        <button class="addBtn styleActive">Add</button>
-                        <button class="removeBtn">Remove</button>
+                        <button type="button" class="addBtn styleActive">Add</button>
+                        <button type="button" class="removeBtn">Remove</button>
                     </span>
 
                 </form>
@@ -66,5 +77,3 @@
                 </div>
             </div>
 </div>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto officia ab exercitationem, deleniti tenetur eum voluptas assumenda vitae reprehenderit, corporis ipsa, placeat perferendis incidunt repellendus!
