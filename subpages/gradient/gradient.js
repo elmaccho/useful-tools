@@ -10,11 +10,13 @@ const inputColor2Number = document.querySelector('.input__color2-number')
 const inputColor2Range = document.querySelector('.input__color2-range')
 const inputColor2 = document.querySelector('.input__color2')
 
-let color1 = "rgba(232,120,62,1)"
-let color1per = "20"
+const linearBtn = document.querySelector('.linearBtn')
+const radialBtn = document.querySelector('.radialBtn')
 
-let color2 = "rgb(235, 235, 235)"
-let color2per = "80"
+
+let backgroundType = "linear-gradient"
+
+target.style.background = `${backgroundType}(${inputAngleNumber.value}deg, ${inputColor1.value} ${inputColor1Number.value}%, ${inputColor2.value} ${inputColor2Number.value}%)`
 
 const AngleNumber = () => {
     inputAngleNumber.value = inputAngleRange.value
@@ -25,7 +27,6 @@ const AngleRange = () => {
     inputAngleRange.value = inputAngleNumber.value
     setValues()
 }
-
 
 const Color1Number = () => {
     inputColor1Number.value = inputColor1Range.value
@@ -45,7 +46,6 @@ const Color2Range = () => {
     setValues()
 }
 
-
 const inputColor1Value = () => {
     setValues()
 }
@@ -54,9 +54,32 @@ const inputColor2Value = () => {
 }
 
 
+const switchToLinear = () => {
+    linearBtn.classList.add('styleActive')
+    radialBtn.classList.remove('styleActive')
+
+    backgroundType = "linear"
+
+    console.log(backgroundType);
+
+    setValues()
+}
+
+const switchToRadius = () => {
+    linearBtn.classList.remove('styleActive')
+    radialBtn.classList.add('styleActive')
+
+    backgroundType = "radial"
+
+    setValues()
+}
 
 const setValues = () => {
-    target.style.background = `linear-gradient(${inputAngleNumber.value}deg, ${inputColor1.value} ${inputColor1Number.value}%, ${inputColor2.value} ${inputColor2Number.value}%)`
+    if(backgroundType == "radial"){
+        target.style.background = `radial-gradient(circle, ${inputColor1.value} ${inputColor1Number.value}%, ${inputColor2.value} ${inputColor2Number.value}%)`
+    } else if(backgroundType == "linear") {
+        target.style.background = `linear-gradient(${inputAngleNumber.value}deg, ${inputColor1.value} ${inputColor1Number.value}%, ${inputColor2.value} ${inputColor2Number.value}%)`
+    }
 }
 
 inputAngleNumber.addEventListener('input', AngleRange)
@@ -69,3 +92,6 @@ inputColor1Number.addEventListener('input', Color1Range)
 inputColor2.addEventListener('input', inputColor2Value)
 inputColor2Range.addEventListener('input', Color2Number)
 inputColor2Number.addEventListener('input', Color2Range)
+
+linearBtn.addEventListener('click', switchToLinear)
+radialBtn.addEventListener('click', switchToRadius)

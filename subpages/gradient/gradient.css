@@ -28,7 +28,8 @@
 .target{
     width: 100%;
     height: 55%;
-    background: linear-gradient(90deg, #e8783e 20%, #ebebeb 80%);
+
+    background: linear-gradient(90deg, rgb(232, 120, 63) 21%, rgb(235,235,235) 100%);
 }
 
 .settings{
@@ -89,7 +90,7 @@
 .gradientStyle__wrapper{
     display: flex;
 }
-.linearBtn,.radiusBtn, .addBtn, .removeBtn{
+.linearBtn,.radialBtn, .addBtn, .removeBtn{
     width: 100%;
     height: 30px;
     border: 2px solid #e8783e;
@@ -99,7 +100,7 @@
 .linearBtn, .addBtn{
     border-radius: 5px 0 0 5px;
 }
-.radiusBtn, .removeBtn{
+.radialBtn, .removeBtn{
     border-radius: 0 5px 5px 0;
 }
 .styleActive{

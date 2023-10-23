@@ -14,13 +14,13 @@
                     <div class="sett__row">
                         <span class="gradientStyle__wrapper">
                             <button type="button" class="linearBtn styleActive">Linear</button>
-                            <button type="button" class="radiusBtn">Radius</button>
+                            <button type="button" class="radialBtn">Radial</button>
                         </span>
                     </div>
                     <div class="sett__row">
                         <p>Angle</p>
                         <div class="sett__position">
-                            <input class="input__number input__angle-number" type="number" name="" id="" value="0" min="0" max="360"><input class="input__range input__angle-range" type="range" name="" id="" min="0" max="360" value="0">
+                            <input class="input__number input__angle-number" type="number" name="" id="" value="90" min="0" max="360"><input class="input__range input__angle-range" type="range" name="" id="" min="0" max="360" value="90">
                         </div>
                     </div>
 
@@ -28,9 +28,9 @@
                         <div class="sett__row">
                             <p>Color 1</p>
                             <div class="sett__position">
-                                <input class="input__number input__color1-number" type="number" name="" id="" value="0">
+                                <input class="input__number input__color1-number" type="number" name="" id="" value="35">
                                 <input type="color" name="" id="" class="input__color input__color1" value="#e8783e">
-                                <input class="input__range input__color1-range" type="range" name="" id="" min="0" max="100" value="0">
+                                <input class="input__range input__color1-range" type="range" name="" id="" min="0" max="100" value="35">
                             </div>
                         </div>
                     </span>
@@ -39,9 +39,9 @@
                         <div class="sett__row">
                             <p>Color 2</p>
                             <div class="sett__position">
-                                <input class="input__number input__color2-number" type="number" name="" id="" value="0">
+                                <input class="input__number input__color2-number" type="number" name="" id="" value="100">
                                 <input type="color" name="" id="" class="input__color input__color2" value="#ebebeb">
-                                <input class="input__range input__color2-range" type="range" name="" id="" min="0" max="100" value="0">
+                                <input class="input__range input__color2-range" type="range" name="" id="" min="0" max="100" value="100">
                             </div>
                         </div>
                     </span>
