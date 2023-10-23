@@ -28,9 +28,9 @@
                         <div class="sett__row">
                             <p>Color 1</p>
                             <div class="sett__position">
-                                <input class="input__number input__color-number" type="number" name="" id="" value="0">
-                                <input type="color" name="" id="" class="input__color">
-                                <input class="input__range input__color-range" type="range" name="" id="" min="-100" max="100" value="0">
+                                <input class="input__number input__color1-number" type="number" name="" id="" value="0">
+                                <input type="color" name="" id="" class="input__color input__color1" value="#e8783e">
+                                <input class="input__range input__color1-range" type="range" name="" id="" min="0" max="100" value="0">
                             </div>
                         </div>
                     </span>
@@ -39,9 +39,9 @@
                         <div class="sett__row">
                             <p>Color 2</p>
                             <div class="sett__position">
-                                <input class="input__number input__color-number" type="number" name="" id="" value="0">
-                                <input type="color" name="" id="" class="input__color">
-                                <input class="input__range input__color-range" type="range" name="" id="" min="-100" max="100" value="0">
+                                <input class="input__number input__color2-number" type="number" name="" id="" value="0">
+                                <input type="color" name="" id="" class="input__color input__color2" value="#ebebeb">
+                                <input class="input__range input__color2-range" type="range" name="" id="" min="0" max="100" value="0">
                             </div>
                         </div>
                     </span>
